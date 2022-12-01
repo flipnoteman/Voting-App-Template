@@ -2,7 +2,7 @@
 
 
 *For Android*
-download the ```voting_app_V1._0.apk```.
+download the ```voting_app_v1.x_0.apk```.
 
 *For IOS*
 Pull the repository, build it in release mode, and then Distribute and Sign as IOS.
