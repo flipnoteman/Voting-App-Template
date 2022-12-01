@@ -9,3 +9,6 @@ Pull the repository, build it in release mode, and then Distribute and Sign as I
 
 Document Repository:
 ```https://github.com/flipnoteman/Voting_App_CSC331/tree/master/Documents/CSC331-DreamTeam-Docs-main```.
+
+
+You may download the 2 version releases of our project: v1.0 is Prerelease, and v1.2 is first official Release
