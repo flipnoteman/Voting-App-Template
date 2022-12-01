@@ -12,3 +12,6 @@ Document Repository:
 
 
 You may download the 2 version releases of our project: v1.0 is Prerelease, and v1.2 is first official Release
+
+
+Group Interaction Documentation is in ```https://github.com/flipnoteman/Voting_App_CSC331/tree/master/Documents/CSC331-DreamTeam-Docs-main```
