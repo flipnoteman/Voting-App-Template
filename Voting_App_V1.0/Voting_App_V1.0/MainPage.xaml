@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Voting_App_V1._0.MainPage">
+             x:Class="Voting_App_V1._0.MainPage"
+             Title="Login">
     <StackLayout Margin="20,35,20,25">
         
         <Grid Margin="20,35,20,20">
@@ -17,6 +18,7 @@
                 <RowDefinition Height="40" />
                 <RowDefinition Height="10" />
                 <RowDefinition Height="25" />
+                <RowDefinition Height="40" />
                 <RowDefinition Height="40" />
                 <RowDefinition Height="40" />
             </Grid.RowDefinitions>
@@ -36,7 +38,8 @@
             <Entry Grid.Row="5"
                    Placeholder="IDN"
                    TextChanged="InputView_OnTextChanged"
-                   Completed="Entry_OnCompleted" />
+                   Completed="User_OnCompleted" 
+                   x:Name="UserEntry"/>
             <Label Grid.Row="7"
                    Text="Password:"
                    FontSize="Medium"></Label>
@@ -46,11 +49,16 @@
                    IsSpellCheckEnabled="false"
                    IsTextPredictionEnabled="false"
                    TextChanged="InputView_OnTextChanged"
-                   Completed="Entry_OnCompleted" />
+                   Completed="Pass_OnCompleted" 
+                   x:Name ="PasswordEntry"/>
             <Button Grid.Row="9"
                     Clicked="Button_OnClicked"
                     Text="Submit"
                     BackgroundColor="Gray" />
+            <Label Text=""
+                   x:Name="ErrorLabel"
+                   TextColor="Crimson"
+                   Grid.Row="10"/>
         </Grid>
     </StackLayout>
 </ContentPage>

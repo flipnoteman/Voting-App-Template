@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
+             x:Class="Voting_App_V1_0.ContestPage"
+             Title="Contests">
+    <StackLayout Margin="20,35,20,20">
+        <BoxView HeightRequest="3"/>
+        <CollectionView ItemsSource="{Binding Contests}"
+                        SelectionMode="Single"
+                        SelectionChanged="OnSelectionChanged">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10"
+                          RowDefinitions="Auto, *"
+                          ColumnDefinitions="Auto, *">
+                        <Image Grid.RowSpan="2"
+                               Source="{Binding ImgURL}"
+                               Aspect="AspectFill"
+                               HeightRequest="60"
+                               WidthRequest="60"/>
+                        <Label Grid.Column="1"
+                               Text="{Binding Name}"
+                               FontAttributes="Bold"></Label>
+                        <Label Grid.Column="1"
+                               Grid.Row="1"
+                               Text="{Binding Description}"
+                               VerticalOptions="End"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

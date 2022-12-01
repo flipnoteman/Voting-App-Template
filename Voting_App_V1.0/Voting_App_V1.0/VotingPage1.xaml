@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Voting_App_V1_0.VotingPage1"
+             Title="{Binding Name}">
+    <ContentPage.Content>
+        <StackLayout x:Name ="MStack" 
+                     Margin="20,35,20,20">
+            <CollectionView ItemsSource="{Binding Candidates}"
+                            SelectionMode="Single"
+                            SelectionChanged="OnSelectionChanged">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10"
+                              RowDefinitions="Auto, *"
+                              ColumnDefinitions="Auto, *"
+                              x:Name ="MainGrid">
+                            <Label Text="{Binding Name}"
+                                   FontSize="Medium"
+                                   HorizontalOptions="Center"
+                                   HorizontalTextAlignment="Center"></Label>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button Text="Submit Vote"
+                    Clicked="OnClickEvent"
+                    BackgroundColor="Gray"></Button>
+            <Label x:Name ="ErrLabel"
+                   Text=""
+                   TextColor="Crimson"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
