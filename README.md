@@ -1,4 +1,4 @@
-# Voting_App_CSC331
+# Voting App Template
 
 
 *For Android*
